@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido - Bella Italia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Realizar Pedido</h1>
+    <form id="formPedido">
+      <label>Fecha:
+        <input type="date" id="fecha" required>
+      </label>
+
+      <label>Cantidad de pizzas:
+        <input type="number" id="cantidad" min="1" value="1" required>
+      </label>
+
+      <label>Tipo de pizza:
+        <select id="tipoPizza" required>
+          <option value="Margarita" data-precio="100">Margarita ($100)</option>
+          <option value="Pepperoni" data-precio="120">Pepperoni ($120)</option>
+          <option value="Hawaiana" data-precio="130">Hawaiana ($130)</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Complementos:</legend>
+        <label><input type="checkbox" value="Refresco" data-precio="20"> Refresco ($20)</label><br>
+        <label><input type="checkbox" value="Coca-Cola" data-precio="25"> Coca-Cola ($25)</label><br>
+        <label><input type="checkbox" value="Papas" data-precio="30"> Papas ($30)</label>
+      </fieldset>
+
+      <label>Entrega:
+        <select id="entrega" required>
+          <option value="recoger">Recoger en tienda</option>
+          <option value="domicilio">A domicilio</option>
+        </select>
+      </label>
+
+      <div id="direccion" class="oculto">
+        <input type="text" id="calle" placeholder="Calle">
+        <input type="text" id="numero" placeholder="Número">
+        <input type="text" id="colonia" placeholder="Colonia">
+        <input type="text" id="ciudad" placeholder="Ciudad">
+      </div>
+
+      <label>Método de pago:
+        <select id="pago" required>
+          <option value="efectivo">Efectivo</option>
+          <option value="tarjeta">Tarjeta</option>
+        </select>
+      </label>
+
+      <div id="efectivo" class="oculto">
+        <input type="number" id="montoEfectivo" placeholder="Cantidad que entregará">
+      </div>
+
+      <div id="tarjeta" class="oculto">
+        <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta">
+        <input type="text" id="titular" placeholder="Titular">
+        <input type="text" id="vencimiento" placeholder="MM/AA">
+        <input type="text" id="cvv" placeholder="CVV">
+      </div>
+
+      <button type="submit" class="btn">Continuar a Ticket</button>
+    </form>
+  </div>
+  <script src="pedido.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comentarios - Bella Italia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💬 Enviar Comentarios</h1>
+    <form action="https://formsubmit.co/TUCORREO@gmail.com" method="POST">
+      <label>Nombre:
+        <input type="text" name="nombre" required>
+      </label>
+
+      <label>Correo:
+        <input type="email" name="email" required>
+      </label>
+
+      <label>Comentario:
+        <textarea name="comentario" rows="5" required></textarea>
+      </label>
+
+      <!-- Ocultar el captcha de FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Redireccionar después del envío -->
+      <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+      <button type="submit" class="btn">Enviar Comentario</button>
+    </form>
+    <a href="index.html" class="btn-secondary">Volver al Inicio</a>
+  </div>
+</body>
+</html>
